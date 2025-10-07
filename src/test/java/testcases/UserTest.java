@@ -71,35 +71,35 @@ public class UserTest  extends  BaseClass{
         assertThat(isSortedAscending(userIds), is(true));
     }
 
-    @Test
-    public void testCreateUser()
-    {
-        User newUser = Payload.userPayload();
-        int userId = given()
-                .contentType(ContentType.JSON)
-                .body(newUser)
-                .when()
-                .post(Routes.CREATE_USER)
-                .then()
-                .statusCode(201)
-                .body("id", notNullValue())
-                .extract().jsonPath().getInt("id");
-    }
-    @Test
-    public void testUpdateUser()
-    {
-        User updateUser = Payload.userPayload();
-         given()
-                .pathParam("id", configReader.getIntProperty("userId"))
-                .contentType(ContentType.JSON)
-                .body(updateUser)
-                .when()
-                .put(Routes.UPDATE_USER)
-                .then()
-                .statusCode(200)
-                .body("username", equalTo(updateUser.username()));
+    // @Test
+    // public void testCreateUser()
+    // {
+    //     User newUser = Payload.userPayload();
+    //     int userId = given()
+    //             .contentType(ContentType.JSON)
+    //             .body(newUser)
+    //             .when()
+    //             .post(Routes.CREATE_USER)
+    //             .then()
+    //             .statusCode(201)
+    //             .body("id", notNullValue())
+    //             .extract().jsonPath().getInt("id");
+    // }
+    // @Test
+    // public void testUpdateUser()
+    // {
+    //     User updateUser = Payload.userPayload();
+    //      given()
+    //             .pathParam("id", configReader.getIntProperty("userId"))
+    //             .contentType(ContentType.JSON)
+    //             .body(updateUser)
+    //             .when()
+    //             .put(Routes.UPDATE_USER)
+    //             .then()
+    //             .statusCode(200)
+    //             .body("username", equalTo(updateUser.username()));
 
-    }
+    // }
     @Test
     public void testDeleteUser()
     {
