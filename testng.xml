@@ -21,11 +21,11 @@
         </classes>
     </test>
 
-    <!-- <test name="Auth Tests">
+    <test name="Auth Tests">
         <classes>
             <class name="testcases.LoginTests"/>
         </classes>
-    </test> -->
+    </test>
 
 
 </suite>
