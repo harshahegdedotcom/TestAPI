@@ -85,21 +85,21 @@ public class UserTest  extends  BaseClass{
     //             .body("id", notNullValue())
     //             .extract().jsonPath().getInt("id");
     // }
-    // @Test
-    // public void testUpdateUser()
-    // {
-    //     User updateUser = Payload.userPayload();
-    //      given()
-    //             .pathParam("id", configReader.getIntProperty("userId"))
-    //             .contentType(ContentType.JSON)
-    //             .body(updateUser)
-    //             .when()
-    //             .put(Routes.UPDATE_USER)
-    //             .then()
-    //             .statusCode(200)
-    //             .body("username", equalTo(updateUser.username()));
+    @Test
+    public void testUpdateUser()
+    {
+        User updateUser = Payload.userPayload();
+         given()
+                .pathParam("id", configReader.getIntProperty("userId"))
+                .contentType(ContentType.JSON)
+                .body(updateUser)
+                .when()
+                .put(Routes.UPDATE_USER)
+                .then()
+                .statusCode(200)
+                .body("username", equalTo(updateUser.username()));
 
-    // }
+    }
     @Test
     public void testDeleteUser()
     {
