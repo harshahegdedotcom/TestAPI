@@ -81,7 +81,7 @@ public class UserTest  extends  BaseClass{
                 .when()
                 .post(Routes.CREATE_USER)
                 .then()
-                .statusCode(201)
+                .statusCode(200)
                 .body("id", notNullValue())
                 .extract().jsonPath().getInt("id");
     }
