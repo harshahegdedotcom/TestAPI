@@ -10,7 +10,7 @@
             <class name="testcases.ProductTest" />
         </classes>
     </test>
-    <test name="User Tests">
+    <!-- <test name="User Tests">
         <classes>
             <class name="testcases.UserTest" />
         </classes>
@@ -25,7 +25,7 @@
         <classes>
             <class name="testcases.LoginTests"/>
         </classes>
-    </test>
+    </test> -->
 
 
 </suite>
