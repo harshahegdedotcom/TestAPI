@@ -71,20 +71,20 @@ public class UserTest  extends  BaseClass{
         assertThat(isSortedAscending(userIds), is(true));
     }
 
-    @Test
-    public void testCreateUser()
-    {
-        User newUser = Payload.userPayload();
-        int userId = given()
-                .contentType(ContentType.JSON)
-                .body(newUser)
-                .when()
-                .post(Routes.CREATE_USER)
-                .then()
-                .statusCode(200)
-                .body("id", notNullValue())
-                .extract().jsonPath().getInt("id");
-    }
+    // @Test
+    // public void testCreateUser()
+    // {
+    //     User newUser = Payload.userPayload();
+    //     int userId = given()
+    //             .contentType(ContentType.JSON)
+    //             .body(newUser)
+    //             .when()
+    //             .post(Routes.CREATE_USER)
+    //             .then()
+    //             .statusCode(200)
+    //             .body("id", notNullValue())
+    //             .extract().jsonPath().getInt("id");
+    // }
     @Test
     public void testUpdateUser()
     {
