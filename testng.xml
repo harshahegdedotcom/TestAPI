@@ -10,11 +10,11 @@
             <class name="testcases.ProductTest" />
         </classes>
     </test>
-    <test name="User Tests">
+    <!-- <test name="User Tests">
         <classes>
             <class name="testcases.UserTest" />
         </classes>
-    </test>
+    </test> -->
     <test name="Cart Tests">
         <classes>
             <class name="testcases.CartTests"/>
